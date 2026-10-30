@@ -303,8 +303,8 @@
 % Usage: \linkedin{<linked-in-nick>}
 \newcommand*{\linkedin}[1]{\def\@linkedin{#1}}
 
-% Usage: \twitter{<twitter handle>}
-\newcommand*{\twitter}[1]{\def\@twitter{#1}}
+% Usage: \googlescholar{<user GUID>}
+\newcommand*{\googlescholar}[1]{\def\@googlescholar{Google Scholar}}
 
 % Defines writer's skype (optional)
 % Usage: \skype{<skype account>}
@@ -478,11 +478,11 @@
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
           \href{https://www.linkedin.com/in/\@linkedin}{\faLinkedinSquare\acvHeaderIconSep\@linkedin}%
         }%
-      \ifthenelse{\isundefined{\@twitter}}%
+      \ifthenelse{\isundefined{\@googlescholar}}%
         {}%
         {%
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
-          \href{https://twitter.com/\@twitter}{\faTwitter\acvHeaderIconSep\@twitter}%
+          \href{https://scholar.google.com/citations?user=\@googlescholar}{\faHome\acvHeaderIconSep\@googlescholar}%
         }%
       \ifthenelse{\isundefined{\@skype}}%
         {}%
